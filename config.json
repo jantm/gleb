@@ -1,0 +1,27 @@
+{
+  "path" : {
+    "less"      : "./less",
+    "css"       : "./css",
+    "html"      : "./html",
+    "templates" : "./templates",
+    "assets"    : {
+      "local"    : "../images",
+      "external" : ""
+    }
+  },
+
+  "mailchimp": {
+    "api_key" : ""
+  },
+
+  "mailgun": {
+    "domain"  : "",
+    "api_key" : ""
+  },
+
+  "send": {
+    "from"    : "you@yourdomain.com",
+    "to"      : "you@yourdomain.com",
+    "subject" : "Test mail"
+  }
+}
