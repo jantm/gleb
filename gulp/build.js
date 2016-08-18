@@ -5,5 +5,5 @@ var gulp        = require('gulp');
 var runSequence = require('run-sequence');
 
 gulp.task('build', function(done) {
-    runSequence('clean', 'less', 'injectcss', 'inline', 'assetpaths', done);
+  runSequence('clean', 'less', 'injectcss', 'inline', 'assetpaths', 'htmlclean', done);
 });

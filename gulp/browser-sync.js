@@ -8,7 +8,7 @@ var browserSync = require('browser-sync').create();
 gulp.task('browserSync', [], function() {
     var files = [
         config.path.less + '/**/*.less',
-        config.path.templates + '/**/.html'
+        config.path.html + '/**/*.html'
     ];
 
     browserSync.init({
