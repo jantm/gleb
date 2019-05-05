@@ -1,0 +1,21 @@
+# npm
+node_modules
+package-lock.json
+
+# generated dirs
+build
+preview
+css
+
+# default dirs
+html
+images
+less
+
+# example exceptions
+!html/example.html
+!less/reset.less
+!less/style.less
+!less/example.less
+!images/googlelogo_color_272x92dp.png
+
