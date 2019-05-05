@@ -10,12 +10,12 @@ var autoprefix           = new LessPluginAutoPrefix({ browsers: ['last 2 version
 
 // Compile less files without minicifaction
 gulp.task('less', function() {
-    var options = {
-        paths   : [ path.join(__dirname, 'less', 'includes') ],
-        plugins : [ autoprefix ]
-    };
-    
-    return gulp.src(config.path.less + '/**/*.less')
-        .pipe(less(options))
-        .pipe(gulp.dest(config.path.css));
+  var options = {
+    paths:   [ path.join(__dirname, 'less', 'includes') ],
+    plugins: [ autoprefix ],
+  };
+
+  return gulp.src(config.path.less + '/**/*.less')
+    .pipe(less(options))
+    .pipe(gulp.dest(config.path.css));
 });

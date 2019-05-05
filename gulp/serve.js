@@ -5,5 +5,5 @@ var gulp        = require('gulp');
 var runSequence = require('run-sequence');
 
 gulp.task('serve', function(done) {
-  runSequence('clean', 'less', 'cleancss', 'injectcss', 'inline', 'htmlclean', 'browserSync', done);
+  runSequence('clean', 'less', 'cleancss', 'injectcss:dev', 'inline:dev', 'htmlclean:dev', 'browserSync', done);
 });

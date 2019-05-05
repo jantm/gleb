@@ -13,8 +13,7 @@ Development:
 
 Build:
 
-- compiling, inserting and inlining styles just as in the development flow
-- minify HTML and CSS
+- compile, insert and inline styles just as in the development flow
 - replace all image paths in the final HTML template (`src` and `href` attributes, `background-image` urls) from your local paths to the final hosted ones (e.g. on AWS) 
 
 Test:
@@ -61,6 +60,10 @@ Aside from the gulp tasks etc., the default directory structure looks like this:
 ```
 
 You can change it in the `config.json` file, where you can also set a build directory, set test email data, and add MailChimp and Mailgun credentials.
+
+When you run `gulp serve`, the default browser will show you the newly created `preview` directory. All templates processed by the watcher (triggered by the `gulp serve` command) are put here.
+
+When you run `gulp build`, final versions of the processed templates end up in the newly created `build` directory.
 
 Note that currently when you run `gulp serve` or `gulp build`, *all* templates will be processed (which might slow things down if you have lots of templates).
 

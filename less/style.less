@@ -5,27 +5,23 @@ body {
 	font-family: Arial, sans-serif;
 }
 
-h1, 
-h2, 
-h3, 
+h1,
+h2,
+h3,
 h4 {
 	color: #212121;
-	font-family: Georgia, serif;
 	margin: 0;
 }
 
 p {
-	color: #515151;
-	font-size: 16px;
 	margin: 0;
-	padding-bottom: 10px;
 }
 
 .vertical-spacing {
 	padding-bottom: 20px;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 415px) {
 	table {
 		width: 100% !important;
 	}
@@ -33,10 +29,12 @@ p {
 	td {
 		padding-right: 10px !important;
 		padding-left: 10px !important;
-	}
 
-	img {
-		width: 100% !important;
-		height: auto !important;
+		&.no-padding {
+			padding-right: 0 !important;
+			padding-left: 0 !important;
+		}
 	}
 }
+
+

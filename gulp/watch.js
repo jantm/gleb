@@ -6,5 +6,5 @@ var watch       = require('gulp-watch');
 var runSequence = require('run-sequence');
 
 gulp.task('watch', function(done) {
-	runSequence('less', 'cleancss', 'injectcss:dev', 'inline', 'htmlclean', done);
+  runSequence('clean:dev', 'less', 'cleancss', 'injectcss:dev', 'inline:dev', 'htmlclean:dev', done);
 });

@@ -6,6 +6,11 @@ var clean  = require('gulp-clean');
 
 // Clean the preview directory
 gulp.task('clean', function() {
-    return gulp.src(config.path.templates, {read: false})
-        .pipe(clean());
+  return gulp.src(config.path.build, {read: false})
+    .pipe(clean());
+});
+
+gulp.task('clean:dev', function() {
+  return gulp.src(config.path.preview, {read: false})
+    .pipe(clean());
 });

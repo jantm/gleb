@@ -4,11 +4,25 @@ var config    = require('../config.json');
 var gulp      = require('gulp');
 var htmlclean = require('gulp-htmlclean');
 
-gulp.task('htmlclean', function() {
-  return gulp.src(config.path.templates + '/*.html')
+function htmlClean(pathKey) {
+  var path = config.path[pathKey];
+
+  if (!path) {
+    return;
+  }
+
+  return gulp.src(path + '/*.html')
     .pipe(htmlclean({
-    	protect: /\n/g
+    	protect: /\n/g,
     }))
-    .pipe(gulp.dest(config.path.templates));
+    .pipe(gulp.dest(path));
+}
+
+gulp.task('htmlclean', function() {
+  return htmlClean('build');
+});
+
+gulp.task('htmlclean:dev', function() {
+  return htmlClean('preview');
 });
 
